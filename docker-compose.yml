@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  nginx:
+    build:
+      context: .
+    ports:
+      - '8888:80'
+      - '450:443'
+      - '1935:1935'
+    restart: unless-stopped
